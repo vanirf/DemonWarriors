@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE muclient>
+<!-- Saved on Sonntag, September 27, 2015, 4:29  -->
+<!-- MuClient version 4.94 -->
+<!-- Written by Nick Gammon -->
+<!-- Home Page: http://www.mushclient.com/ -->
+
+<!-- Plugin state saved. Plugin: "MushReader". World: "Avalon". -->
+
+<muclient>
+
+<!-- variables -->
+
+<variables
+   muclient_version="4.94"
+   world_file_version="15"
+   date_saved="2015-09-27 16:29:13"
+  >
+</variables>
+</muclient>
