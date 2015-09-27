@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!DOCTYPE muclient>
-<!-- Saved on Sonntag, September 27, 2015, 5:14  -->
+<!-- Saved on Sonntag, September 27, 2015, 5:57  -->
 <!-- MuClient version 4.94 -->
 <!-- Written by Nick Gammon -->
 <!-- Home Page: http://www.mushclient.com/ -->
@@ -8,7 +8,7 @@
 <world
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-27 17:14:55"
+   date_saved="2015-09-27 17:57:04"
 
    auto_say_override_prefix="-"
    auto_say_string="say "
@@ -22,6 +22,7 @@
    output_font_name="FixedSys"
    script_editor="notepad"
    script_editor_argument="%file"
+   script_filename="C:\Git\DemonWarriors\lua\DemonWarriors\DemonWarriors.lua"
    script_language="Lua"
    script_prefix="#"
    site="avalon.mud.de"
@@ -109,8 +110,27 @@
 <triggers
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-27 17:14:55"
+   date_saved="2015-09-27 17:57:04"
   >
+  <trigger
+   enabled="y"
+   group="Daemonennamen"
+   match="Einen\s+(Krasit|Sensal|Bullrik|Azmarog),\s+namens\s+(\w+)"
+   regexp="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>InsertDemon('%1', '%2')</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="Daemonennamen"
+   match="Im Moment kennst Du folgende Daemonen:"
+   send_to="12"
+   sequence="100"
+  >
+  <send>ClearAllDemonNames()</send>
+  </trigger>
 </triggers>
 
 <!-- aliases -->
@@ -118,7 +138,7 @@
 <aliases
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-27 17:14:55"
+   date_saved="2015-09-27 17:57:04"
   >
 </aliases>
 
@@ -127,7 +147,7 @@
 <timers
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-27 17:14:55"
+   date_saved="2015-09-27 17:57:04"
   >
 </timers>
 
@@ -136,7 +156,7 @@
 <macros
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-27 17:14:55"
+   date_saved="2015-09-27 17:57:04"
   >
 
   <macro name="up" type="send_now" >
@@ -230,7 +250,7 @@
 <variables
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-27 17:14:55"
+   date_saved="2015-09-27 17:57:04"
   >
 </variables>
 
@@ -239,7 +259,7 @@
 <colours
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-27 17:14:55"
+   date_saved="2015-09-27 17:57:04"
   >
 
 <ansi>
@@ -296,7 +316,7 @@
 <keypad
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-27 17:14:55"
+   date_saved="2015-09-27 17:57:04"
   >
 
   <key name="0" >
@@ -410,7 +430,7 @@
 <printing
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-27 17:14:55"
+   date_saved="2015-09-27 17:57:04"
   >
 
 <ansi>
