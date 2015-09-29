@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!DOCTYPE muclient>
-<!-- Saved on Dienstag, September 29, 2015, 7:09  -->
+<!-- Saved on Dienstag, September 29, 2015, 8:11  -->
 <!-- MuClient version 4.94 -->
 <!-- Written by Nick Gammon -->
 <!-- Home Page: http://www.mushclient.com/ -->
@@ -8,7 +8,7 @@
 <world
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-29 19:09:33"
+   date_saved="2015-09-29 20:11:43"
 
    auto_say_override_prefix="-"
    auto_say_string="say "
@@ -110,11 +110,12 @@
 <triggers
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-29 19:09:33"
+   date_saved="2015-09-29 20:11:43"
   >
   <trigger
    group="BBeschuetze"
    match="Dir gelten wuerden abzufangen."
+   send_to="12"
    sequence="100"
   >
   <send>BefehlBeschuetze()</send>
@@ -136,21 +137,20 @@
   <send>BefehlBeschuetze()</send>
   </trigger>
   <trigger
-   group="HervorrufungWegschicken"
-   match="Du bildest mit dem Krasit eine neue Gruppe."
-   send_to="12"
-   sequence="100"
-  >
-  <send>DemonAway()</send>
-  </trigger>
-  <trigger
-   enabled="y"
    group="BName"
    match="Du bildest mit dem Krasit eine neue Gruppe."
    send_to="12"
    sequence="100"
   >
   <send>BefehlName()</send>
+  </trigger>
+  <trigger
+   group="HervorrufungWegschicken"
+   match="Du bildest mit dem Krasit eine neue Gruppe."
+   send_to="12"
+   sequence="100"
+  >
+  <send>DemonAway()</send>
   </trigger>
   <trigger
    enabled="y"
@@ -172,7 +172,6 @@
   <send>ClearAllDemonNames()</send>
   </trigger>
   <trigger
-   enabled="y"
    group="BRuestungsverstaerkung"
    match="[Gruppe] Der Bullrik verlaesst die Gruppe."
    send_to="12"
@@ -220,7 +219,7 @@
 <aliases
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-29 19:09:33"
+   date_saved="2015-09-29 20:11:43"
   >
 </aliases>
 
@@ -229,7 +228,7 @@
 <timers
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-29 19:09:33"
+   date_saved="2015-09-29 20:11:43"
   >
 </timers>
 
@@ -238,7 +237,7 @@
 <macros
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-29 19:09:33"
+   date_saved="2015-09-29 20:11:43"
   >
 
   <macro name="up" type="send_now" >
@@ -332,7 +331,7 @@
 <variables
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-29 19:09:33"
+   date_saved="2015-09-29 20:11:43"
   >
   <variable name="mxp_ap">0</variable>
   <variable name="mxp_max_ap">118</variable>
@@ -349,7 +348,7 @@
 <colours
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-29 19:09:33"
+   date_saved="2015-09-29 20:11:43"
   >
 
 <ansi>
@@ -406,7 +405,7 @@
 <keypad
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-29 19:09:33"
+   date_saved="2015-09-29 20:11:43"
   >
 
   <key name="0" >
@@ -520,7 +519,7 @@
 <printing
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-29 19:09:33"
+   date_saved="2015-09-29 20:11:43"
   >
 
 <ansi>
