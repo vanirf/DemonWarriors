@@ -1,1 +1,6 @@
 require("DemonWarriors.DemonNames")
+require("DemonWarriors.HervorrufungWegschicken")
+require("DemonWarriors.BefehlName")
+require("DemonWarriors.BefehlBeschuetze")
+require("DemonWarriors.BefehlRuestungsverstaerkung")
+require("DemonWarriors.BefehlWaffenverstaerkung")
