@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!DOCTYPE muclient>
-<!-- Saved on Sonntag, September 27, 2015, 5:57  -->
+<!-- Saved on Dienstag, September 29, 2015, 8:11  -->
 <!-- MuClient version 4.94 -->
 <!-- Written by Nick Gammon -->
 <!-- Home Page: http://www.mushclient.com/ -->
@@ -8,7 +8,7 @@
 <world
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-27 17:57:04"
+   date_saved="2015-09-29 20:11:43"
 
    auto_say_override_prefix="-"
    auto_say_string="say "
@@ -110,8 +110,48 @@
 <triggers
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-27 17:57:04"
+   date_saved="2015-09-29 20:11:43"
   >
+  <trigger
+   group="BBeschuetze"
+   match="Dir gelten wuerden abzufangen."
+   send_to="12"
+   sequence="100"
+  >
+  <send>BefehlBeschuetze()</send>
+  </trigger>
+  <trigger
+   group="BRuestungsverstaerkung"
+   match="Du bildest mit dem Bullrik eine neue Gruppe."
+   send_to="12"
+   sequence="100"
+  >
+  <send>BefehlRuestungsverstaerkung()</send>
+  </trigger>
+  <trigger
+   group="BBeschuetze"
+   match="Du bildest mit dem Bullrik eine neue Gruppe."
+   send_to="12"
+   sequence="100"
+  >
+  <send>BefehlBeschuetze()</send>
+  </trigger>
+  <trigger
+   group="BName"
+   match="Du bildest mit dem Krasit eine neue Gruppe."
+   send_to="12"
+   sequence="100"
+  >
+  <send>BefehlName()</send>
+  </trigger>
+  <trigger
+   group="HervorrufungWegschicken"
+   match="Du bildest mit dem Krasit eine neue Gruppe."
+   send_to="12"
+   sequence="100"
+  >
+  <send>DemonAway()</send>
+  </trigger>
   <trigger
    enabled="y"
    group="Daemonennamen"
@@ -131,6 +171,47 @@
   >
   <send>ClearAllDemonNames()</send>
   </trigger>
+  <trigger
+   group="BRuestungsverstaerkung"
+   match="[Gruppe] Der Bullrik verlaesst die Gruppe."
+   send_to="12"
+   sequence="100"
+  >
+  <send>Erloese()</send>
+  </trigger>
+  <trigger
+   group="HervorrufungWegschicken"
+   match="[Gruppe] Der Krasit verlaesst die Gruppe."
+   send_to="12"
+   sequence="100"
+  >
+  <send>DemonCall()</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="BName"
+   match="war der Wille von * wohl staerker als Deiner."
+   send_to="12"
+   sequence="100"
+  >
+  <send>BefehlName()</send>
+  </trigger>
+  <trigger
+   group="BBeschuetze"
+   match="war der Wille von * wohl staerker als der Deinige."
+   send_to="12"
+   sequence="100"
+  >
+  <send>BefehlBeschuetze()</send>
+  </trigger>
+  <trigger
+   group="BRuestungsverstaerkung"
+   match="war der Wille von * wohl staerker als der Deinige."
+   send_to="12"
+   sequence="100"
+  >
+  <send>BefehlRuestungsverstaerkung()</send>
+  </trigger>
 </triggers>
 
 <!-- aliases -->
@@ -138,7 +219,7 @@
 <aliases
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-27 17:57:04"
+   date_saved="2015-09-29 20:11:43"
   >
 </aliases>
 
@@ -147,7 +228,7 @@
 <timers
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-27 17:57:04"
+   date_saved="2015-09-29 20:11:43"
   >
 </timers>
 
@@ -156,7 +237,7 @@
 <macros
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-27 17:57:04"
+   date_saved="2015-09-29 20:11:43"
   >
 
   <macro name="up" type="send_now" >
@@ -250,8 +331,16 @@
 <variables
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-27 17:57:04"
+   date_saved="2015-09-29 20:11:43"
   >
+  <variable name="mxp_ap">0</variable>
+  <variable name="mxp_max_ap">118</variable>
+  <variable name="mxp_max_mp">9999</variable>
+  <variable name="mxp_max_sp">90</variable>
+  <variable name="mxp_max_tp">362</variable>
+  <variable name="mxp_mp">5103</variable>
+  <variable name="mxp_sp">30</variable>
+  <variable name="mxp_tp">362</variable>
 </variables>
 
 <!-- colours -->
@@ -259,7 +348,7 @@
 <colours
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-27 17:57:04"
+   date_saved="2015-09-29 20:11:43"
   >
 
 <ansi>
@@ -316,7 +405,7 @@
 <keypad
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-27 17:57:04"
+   date_saved="2015-09-29 20:11:43"
   >
 
   <key name="0" >
@@ -430,7 +519,7 @@
 <printing
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-27 17:57:04"
+   date_saved="2015-09-29 20:11:43"
   >
 
 <ansi>
