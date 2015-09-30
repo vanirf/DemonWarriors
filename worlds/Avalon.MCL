@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!DOCTYPE muclient>
-<!-- Saved on Dienstag, September 29, 2015, 8:11  -->
+<!-- Saved on Dienstag, September 29, 2015, 7:42  -->
 <!-- MuClient version 4.94 -->
 <!-- Written by Nick Gammon -->
 <!-- Home Page: http://www.mushclient.com/ -->
@@ -8,7 +8,7 @@
 <world
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-29 20:11:43"
+   date_saved="2015-09-29 19:42:32"
 
    auto_say_override_prefix="-"
    auto_say_string="say "
@@ -110,12 +110,11 @@
 <triggers
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-29 20:11:43"
+   date_saved="2015-09-29 19:42:32"
   >
   <trigger
    group="BBeschuetze"
    match="Dir gelten wuerden abzufangen."
-   send_to="12"
    sequence="100"
   >
   <send>BefehlBeschuetze()</send>
@@ -137,6 +136,15 @@
   <send>BefehlBeschuetze()</send>
   </trigger>
   <trigger
+   enabled="y"
+   group="HervorrufungWegschicken"
+   match="Du bildest mit dem Krasit eine neue Gruppe."
+   send_to="12"
+   sequence="100"
+  >
+  <send>DemonAway()</send>
+  </trigger>
+  <trigger
    group="BName"
    match="Du bildest mit dem Krasit eine neue Gruppe."
    send_to="12"
@@ -145,12 +153,13 @@
   <send>BefehlName()</send>
   </trigger>
   <trigger
-   group="HervorrufungWegschicken"
-   match="Du bildest mit dem Krasit eine neue Gruppe."
+   enabled="y"
+   group="BWaffenverstaerkung"
+   match="Du bildest mit dem Sensal eine neue Gruppe."
    send_to="12"
    sequence="100"
   >
-  <send>DemonAway()</send>
+  <send>BefehlWaffenverstaerkung()</send>
   </trigger>
   <trigger
    enabled="y"
@@ -172,14 +181,7 @@
   <send>ClearAllDemonNames()</send>
   </trigger>
   <trigger
-   group="BRuestungsverstaerkung"
-   match="[Gruppe] Der Bullrik verlaesst die Gruppe."
-   send_to="12"
-   sequence="100"
-  >
-  <send>Erloese()</send>
-  </trigger>
-  <trigger
+   enabled="y"
    group="HervorrufungWegschicken"
    match="[Gruppe] Der Krasit verlaesst die Gruppe."
    send_to="12"
@@ -189,20 +191,20 @@
   </trigger>
   <trigger
    enabled="y"
+   group="BWaffenverstaerkung"
+   match="[Gruppe] Der Sensal verlaesst die Gruppe."
+   send_to="12"
+   sequence="100"
+  >
+  <send>erloese()</send>
+  </trigger>
+  <trigger
    group="BName"
    match="war der Wille von * wohl staerker als Deiner."
    send_to="12"
    sequence="100"
   >
   <send>BefehlName()</send>
-  </trigger>
-  <trigger
-   group="BBeschuetze"
-   match="war der Wille von * wohl staerker als der Deinige."
-   send_to="12"
-   sequence="100"
-  >
-  <send>BefehlBeschuetze()</send>
   </trigger>
   <trigger
    group="BRuestungsverstaerkung"
@@ -212,6 +214,23 @@
   >
   <send>BefehlRuestungsverstaerkung()</send>
   </trigger>
+  <trigger
+   enabled="y"
+   group="BWaffenverstaerkung"
+   match="war der Wille von * wohl staerker als der Deinige."
+   send_to="12"
+   sequence="100"
+  >
+  <send>BefehlWaffenverstaerkung()</send>
+  </trigger>
+  <trigger
+   group="BBeschuetze"
+   match="war der Wille von * wohl staerker als der Deinige."
+   send_to="12"
+   sequence="100"
+  >
+  <send>BefehlBeschuetze()</send>
+  </trigger>
 </triggers>
 
 <!-- aliases -->
@@ -219,7 +238,7 @@
 <aliases
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-29 20:11:43"
+   date_saved="2015-09-29 19:42:32"
   >
 </aliases>
 
@@ -228,7 +247,7 @@
 <timers
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-29 20:11:43"
+   date_saved="2015-09-29 19:42:32"
   >
 </timers>
 
@@ -237,7 +256,7 @@
 <macros
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-29 20:11:43"
+   date_saved="2015-09-29 19:42:32"
   >
 
   <macro name="up" type="send_now" >
@@ -331,15 +350,15 @@
 <variables
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-29 20:11:43"
+   date_saved="2015-09-29 19:42:32"
   >
-  <variable name="mxp_ap">0</variable>
+  <variable name="mxp_ap">20</variable>
   <variable name="mxp_max_ap">118</variable>
   <variable name="mxp_max_mp">9999</variable>
   <variable name="mxp_max_sp">90</variable>
   <variable name="mxp_max_tp">362</variable>
-  <variable name="mxp_mp">5103</variable>
-  <variable name="mxp_sp">30</variable>
+  <variable name="mxp_mp">7478</variable>
+  <variable name="mxp_sp">90</variable>
   <variable name="mxp_tp">362</variable>
 </variables>
 
@@ -348,7 +367,7 @@
 <colours
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-29 20:11:43"
+   date_saved="2015-09-29 19:42:32"
   >
 
 <ansi>
@@ -405,7 +424,7 @@
 <keypad
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-29 20:11:43"
+   date_saved="2015-09-29 19:42:32"
   >
 
   <key name="0" >
@@ -519,7 +538,7 @@
 <printing
    muclient_version="4.94"
    world_file_version="15"
-   date_saved="2015-09-29 20:11:43"
+   date_saved="2015-09-29 19:42:32"
   >
 
 <ansi>
